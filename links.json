@@ -1,0 +1,13 @@
+{
+  "_doc": "Where Chatburg lives. Add a platform: append {id, name, name_en, url, icon (emoji), note, note_en}. Shown in the «Где играть» section and in the footer.",
+  "links": [
+    {"id": "site", "icon": "🏠", "name": "Сайт", "name_en": "Website", "url": "https://evkakuypetrovich-sys.github.io/chatburg/", "note": "Новости, версии, скриншоты", "note_en": "News, versions, screenshots"},
+    {"id": "web", "icon": "🎮", "name": "Веб-версия", "name_en": "Web version", "url": "play/", "note": "Играть в браузере", "note_en": "Play in the browser"},
+    {"id": "discord", "icon": "💬", "name": "Discord", "name_en": "Discord", "url": "https://discord.gg/Z9u2evqPM", "note": "Сообщество игроков", "note_en": "Player community"},
+    {"id": "itch2", "icon": "🕹️", "name": "itch.io (v2)", "name_en": "itch.io (v2)", "url": "https://evkakuy228.itch.io/chatburg", "note": "Скачать Chatburg v2", "note_en": "Download Chatburg v2"},
+    {"id": "itch1", "icon": "🕹️", "name": "itch.io (v1)", "name_en": "itch.io (v1)", "url": "https://evkakuy228.itch.io/chatburg-game", "note": "Первая версия", "note_en": "The first version"},
+    {"id": "gamejolt", "icon": "⚡", "name": "Game Jolt", "name_en": "Game Jolt", "url": "https://gamejolt.com/games/chatburg/1106534", "note": "Страница игры на Game Jolt", "note_en": "Game page on Game Jolt"},
+    {"id": "indiedb", "icon": "🧩", "name": "IndieDB", "name_en": "IndieDB", "url": "https://www.indiedb.com/games/chatburg", "note": "Страница игры на IndieDB", "note_en": "Game page on IndieDB"},
+    {"id": "boosty", "icon": "🧡", "name": "Boosty", "name_en": "Boosty", "url": "https://boosty.to/evkakuy228", "note": "Поддержать разработку", "note_en": "Support development"}
+  ]
+}
