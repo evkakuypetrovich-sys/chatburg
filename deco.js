@@ -44,11 +44,23 @@ if(!RM){let tk=0;addEventListener("scroll",()=>{if(tk)return;tk=requestAnimation
  // sparkles on buttons
  let last=0;document.addEventListener("pointermove",e=>{const b=e.target.closest&&e.target.closest(".btn");if(!b)return;const n=performance.now();if(n-last<60)return;last=n;
   const s=document.createElement("i");s.className="spark";s.style.left=e.clientX+"px";s.style.top=e.clientY+"px";s.style.setProperty("--dx",(Math.random()*40-20)+"px");s.style.setProperty("--dy",(Math.random()*-40)+"px");document.body.appendChild(s);setTimeout(()=>s.remove(),700)},{passive:true})}
-// Konami code → banana cars
-const K=["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"];let ki=0;
-addEventListener("keydown",e=>{ki=(e.key.toLowerCase()===K[ki].toLowerCase()||e.key===K[ki])?ki+1:(e.key===K[0]?1:0);if(ki<K.length)return;ki=0;
- const t=document.createElement("div");t.className="konami-toast";t.textContent=RU()?"🍌 Банановозы выехали на линию!":"🍌 Banana cars incoming!";document.body.appendChild(t);setTimeout(()=>t.remove(),3500);
- for(let i=0;i<30;i++){const b=document.createElement("div");b.className="banana";b.textContent=i%3?"🍌":"🚗";b.style.left=Math.random()*100+"vw";b.style.animationDuration=(2+Math.random()*2.5)+"s";b.style.animationDelay=Math.random()*1.5+"s";document.body.appendChild(b);setTimeout(()=>b.remove(),6500)}});
+// Easter egg: type «банан» (or "banan" / ",fyfy" on the wrong layout), Konami code, or tap a 🍌 button
+function bananas(){const t=document.createElement("div");t.className="konami-toast";t.textContent=RU()?"🍌 Банановозы выехали на линию!":"🍌 Banana cars incoming!";document.body.appendChild(t);setTimeout(()=>t.remove(),3500);
+ const n=RM?8:30;for(let i=0;i<n;i++){const b=document.createElement("div");b.className="banana";b.textContent=i%3?"🍌":"🚗";b.style.left=Math.random()*100+"vw";b.style.animationDuration=(2+Math.random()*2.5)+"s";b.style.animationDelay=Math.random()*1.5+"s";document.body.appendChild(b);setTimeout(()=>b.remove(),6500)}}
+window.cbBananas=bananas;
+const K=["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"];let ki=0,buf="";
+const WORDS=["банан","banan",",fyfy"];
+addEventListener("keydown",e=>{const tg=e.target;if(tg&&(tg.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(tg.tagName)))return;
+ if(e.key.length===1){buf=(buf+e.key.toLowerCase()).slice(-5);if(WORDS.includes(buf)){buf="";bananas();return}}
+ ki=(e.key.toLowerCase()===K[ki].toLowerCase())?ki+1:(e.key===K[0]?1:0);if(ki===K.length){ki=0;bananas()}});
+// visible 🍌 buttons (mascot + footer) for phones
+const mas=document.querySelector(".mascot");if(mas){mas.style.pointerEvents="auto";mas.style.cursor="pointer";mas.setAttribute("role","button");mas.setAttribute("tabindex","0");mas.setAttribute("aria-label","🍌");mas.title=RU()?"Тыкни меня 🍌":"Poke me 🍌";
+ mas.addEventListener("click",bananas);mas.addEventListener("keydown",e=>{if(e.key=="Enter"||e.key==" "){e.preventDefault();bananas()}})}
+if(ft){const fb=document.createElement("button");fb.type="button";fb.className="banbtn";fb.textContent="🍌";fb.title=RU()?"Пасхалка!":"Easter egg!";fb.setAttribute("aria-label",fb.title);fb.onclick=bananas;ft.querySelector(".wrap").prepend(fb)}
+// dismissible announcement under the hero
+const hero=document.querySelector(".hero .cta");if(hero&&localStorage.getItem("cb_banana_hint")!=="1"){
+ hero.insertAdjacentHTML("afterend",`<div class="bananote" role="note"><button type="button" class="bnt">🍌</button><span>${RU()?"Пасхалка: напиши «банан» на клавиатуре или тыкни на банан!":"Easter egg: type “banan” or tap the banana!"}</span><button type="button" class="bnx" aria-label="${RU()?"Скрыть":"Dismiss"}">✕</button></div>`);
+ const n=document.querySelector(".bananote");n.querySelector(".bnt").onclick=bananas;n.querySelector(".bnx").onclick=()=>{localStorage.setItem("cb_banana_hint","1");n.classList.add("bye");setTimeout(()=>n.remove(),300)}}
 // music toggle (muted by default, loads audio only on click)
 const nav=$(".top");if(nav){const btn=document.createElement("button");btn.id="music";btn.type="button";btn.textContent="🔇";btn.title=RU()?"Музыка из игры":"Game music";btn.setAttribute("aria-pressed","false");
  (nav.querySelector("#lang")||nav.lastElementChild).after(btn);let au=null;

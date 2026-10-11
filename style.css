@@ -177,3 +177,11 @@ footer{position:relative;overflow:hidden;padding-top:60px;background:linear-grad
 h2{background:linear-gradient(90deg,var(--pine),#ffd23f)}
 @media(max-width:700px){.mascot{width:70px;bottom:118px}.mascot .bubble{display:none}.livecity{height:100px}}
 @media(prefers-reduced-motion:reduce){.scene,.scene::before,.stars,.sun,.moon,.win,.bird,.mascot,.mascot .arm,.ticker div,.builder,.builder svg,section+section::before,.mascot .bubble{animation:none!important}.bird,.builder{display:none}.ticker div{padding-left:0}::view-transition-old(root),::view-transition-new(root){animation:none}}
+/* banana easter egg */
+.bananote{display:inline-flex;align-items:center;gap:10px;margin:18px auto 0;background:#fff6c2;border:3px dashed var(--ink);border-radius:14px;padding:6px 8px 6px 6px;font-weight:700;font-size:15px;transform:rotate(-1.2deg);box-shadow:3px 3px 0 var(--ink);position:relative;z-index:3;transition:opacity .3s,transform .3s;animation:noteIn .5s .8s both}
+.bananote.bye{opacity:0;transform:rotate(-1.2deg) scale(.9)}@keyframes noteIn{from{opacity:0;transform:translateY(10px) rotate(-4deg)}}
+.bananote button{border:0;background:none;cursor:pointer;font-size:18px;line-height:1}.bnt{font-size:26px!important;animation:wig 2.4s ease-in-out infinite}.bnx{opacity:.55;padding:4px 6px}.bnx:hover{opacity:1}
+@keyframes wig{0%,80%,100%{transform:rotate(0)}85%{transform:rotate(-20deg)}90%{transform:rotate(18deg)}95%{transform:rotate(-10deg)}}
+.banbtn{background:var(--pine);border:3px solid #fff;border-radius:50%;width:40px;height:40px;font-size:20px;cursor:pointer;margin:0 auto 10px;display:block;transition:transform .2s}.banbtn:hover{transform:rotate(-20deg) scale(1.1)}
+@media(max-width:700px){.bananote{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.bnt,.bananote{animation:none}}
