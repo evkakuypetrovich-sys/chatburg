@@ -1,0 +1,15 @@
+(()=>{const A='https://abacus.jasoncameron.dev',N='chatburg-site',L=localStorage;
+const hit=k=>fetch(`${A}/hit/${N}/${k}`).then(r=>r.json()).then(j=>j.value).catch(()=>null);
+const get=k=>fetch(`${A}/get/${N}/${k}`).then(r=>r.ok?r.json():{value:0}).then(j=>j.value??0).catch(()=>null);
+const bar=document.createElement('div');bar.className='cbbar';bar.innerHTML=`<span title="Всего визитов">👀 <b id="cbV">…</b></span><span title="Уникальных посетителей">🧑 <b id="cbU">…</b></span><button id="cbL" class="cbv" aria-label="Нравится">👍 <b>…</b></button><button id="cbD" class="cbv" aria-label="Не нравится">👎 <b>…</b></button><button id="cbF" class="cbf">✉️ Оставить отзыв</button>`;
+const nav=document.querySelector('nav.top');nav?nav.after(bar):document.body.prepend(bar);
+const $=i=>document.getElementById(i),set=(i,v)=>{const e=$(i);(e.querySelector('b')||e).textContent=v??'—'};
+hit('visits').then(v=>set('cbV',v));
+(L.cbUniq?get('unique'):hit('unique').then(v=>{if(v)L.cbUniq=1;return v})).then(v=>set('cbU',v));
+get('like').then(v=>set('cbL',v));get('dislike').then(v=>set('cbD',v));
+const mark=()=>{if(L.cbVote){$(L.cbVote=='like'?'cbL':'cbD').classList.add('on');$('cbL').disabled=$('cbD').disabled=true;bar.title='Спасибо, ваш голос учтён!'}};mark();
+[['cbL','like'],['cbD','dislike']].forEach(([i,k])=>$(i).onclick=()=>{if(L.cbVote)return;L.cbVote=k;mark();hit(k).then(v=>set(i,v))});
+const m=document.createElement('div');m.id='cbM';m.hidden=true;m.innerHTML=`<div class="cbbox"><button class="cbx" aria-label="Закрыть">✕</button><h3>✉️ Ваш отзыв</h3><p class="small">Комментарии через GitHub (giscus). Нужен вход в GitHub.</p><div class="giscus"></div></div>`;document.body.append(m);
+let g=0;$('cbF').onclick=()=>{m.hidden=false;if(g++)return;const s=document.createElement('script');s.src='https://giscus.app/client.js';s.async=true;s.crossOrigin='anonymous';Object.entries({repo:'evkakuypetrovich-sys/chatburg',repoId:'R_kgDOVE9jHQ',category:'General',categoryId:'DIC_kwDOVE9jHc4DHlOW',mapping:'specific',term:'Отзывы о сайте',strict:'0',reactionsEnabled:'1',emitMetadata:'0',inputPosition:'top',theme:'light',lang:'ru',loading:'lazy'}).forEach(([k,v])=>s.dataset[k]=v);m.querySelector('.giscus').append(s)};
+m.onclick=e=>{if(e.target==m||e.target.classList.contains('cbx'))m.hidden=true};document.addEventListener('keydown',e=>{if(e.key=='Escape')m.hidden=true});
+})();
