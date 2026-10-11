@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chatburg — город, где живёт твой чат</title>
+<meta name="description" content="Chatburg — мемный градостроитель для Twitch-стримеров: зрители покупают дома, прорабы матерятся (запикано), машины дрифтят.">
+<meta property="og:title" content="Chatburg v3"><meta property="og:image" content="https://danilkapodlipaev-droid.github.io/chatburg/img/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<link rel="icon" href="favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="canonical" href="https://danilkapodlipaev-droid.github.io/chatburg/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://danilkapodlipaev-droid.github.io/chatburg/"><meta property="og:description" content="Мемный градостроитель для Twitch: чат покупает дома, прораб матерится (запикано). Скачай или играй в браузере.">
+<meta property="og:locale" content="ru_RU"><meta property="og:site_name" content="Chatburg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Chatburg — город, где живёт твой чат"><meta name="twitter:description" content="Мемный градостроитель для Twitch-стримеров."><meta name="twitter:image" content="https://danilkapodlipaev-droid.github.io/chatburg/img/og.jpg"><meta name="theme-color" content="#ff5a5f">
+<link rel="preload" as="image" href="img/225_sunset_after.webp">
+<link rel="stylesheet" href="style.css?v=202610111830"></head><body>
+<nav class="top"><a href="#" class="brand">Chatburg</a>
+<div class="links"><a href="#features" data-ru="Фичи" data-en="Features">Фичи</a><a href="#gallery" data-ru="Скрины" data-en="Shots">Скрины</a><a href="#commands" data-ru="Команды" data-en="Commands">Команды</a><a href="#changelog" data-ru="Что нового" data-en="Changelog">Что нового</a><a href="#faq">FAQ</a><a href="play/" data-ru="Играть" data-en="Play">Играть</a></div>
+<button id="lang" aria-label="language">EN</button></nav>
+
+<header class="hero"><div class="scene" aria-hidden="true">
+<div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+<div class="plane"><span class="ban">!дом — купи домик в Чатбурге!</span><svg viewBox="0 0 80 30" width="80"><path d="M2 16 L60 12 Q78 14 60 20 L2 18Z" fill="#fff" stroke="#24304a" stroke-width="2"/><path d="M30 14 L44 2 L48 2 L42 14Z M10 15 L4 6 L9 6 L16 15Z" fill="#ff5a5f" stroke="#24304a" stroke-width="2"/></svg></div>
+<svg class="layer far" viewBox="0 0 1200 200" preserveAspectRatio="none"><path d="M0 200V120l60-30 40 20 50-60 60 40 40-20 70 50 60-70 50 30 70-40 60 60 50-20 70 30 60-50 50 40 70-30 60 50 70-40 60 30 70-20 80 30V200Z" fill="#a9c9f0"/></svg>
+<svg class="layer mid" viewBox="0 0 1200 220" preserveAspectRatio="none"><g fill="#7ea4e0" stroke="#24304a" stroke-width="3"><rect x="40" y="90" width="70" height="130"/><rect x="130" y="50" width="60" height="170"/><rect x="220" y="110" width="90" height="110"/><rect x="420" y="30" width="55" height="190"/><rect x="500" y="100" width="80" height="120"/><rect x="700" y="70" width="70" height="150"/><rect x="800" y="120" width="100" height="100"/><rect x="940" y="40" width="60" height="180"/><rect x="1030" y="95" width="90" height="125"/></g>
+<g class="crane"><path d="M340 220V40" stroke="#ffd23f" stroke-width="8"/><g class="jib"><path d="M300 42H420" stroke="#ffd23f" stroke-width="7"/><path d="M405 42V90" stroke="#24304a" stroke-width="2"/><rect x="395" y="90" width="20" height="14" fill="#ff5a5f" stroke="#24304a" stroke-width="2"/></g></g></svg>
+<svg class="layer near" viewBox="0 0 1200 160" preserveAspectRatio="none"><g stroke="#24304a" stroke-width="3"><path d="M60 160V90l40-30 40 30v70Z" fill="#ff9fb2"/><path d="M200 160V80h80v80Z" fill="#ffd23f"/><path d="M190 80l50-35 50 35Z" fill="#9b5de5"/><path d="M380 160V95l45-35 45 35v65Z" fill="#3ecf8e"/><path d="M620 160V70h70v90Z" fill="#4d9de0"/><path d="M760 160V100l40-30 40 30v60Z" fill="#ff5a5f"/><path d="M930 160V85h90v75Z" fill="#fff6dc"/><path d="M920 85l55-40 55 40Z" fill="#ff9f1c"/><path d="M1090 160V100l35-28 35 28v60Z" fill="#9b5de5"/></g></svg>
+<div class="road"><div class="car" style="--d:9s;--c:#ff5a5f"></div><div class="car" style="--d:13s;--c:#ffd23f;animation-delay:-4s"></div><div class="car rev" style="--d:11s;--c:#3ecf8e"></div><div class="car rev" style="--d:16s;--c:#4d9de0;animation-delay:-7s"></div></div>
+</div>
+<div class="wrap">
+<div class="tape"></div>
+<h1 class="logo">Chat<span>burg</span></h1>
+<p class="tag" data-ru="Уютный мемный градостроитель, где твой Twitch-чат строит город, а прораб матерится (запикано)." data-en="A cozy meme city-builder where your Twitch chat builds the city and the foreman swears (bleeped).">Уютный мемный градостроитель, где твой Twitch-чат строит город, а прораб матерится (запикано).</p>
+<div class="cta"><a class="btn big" id="dl" href="https://github.com/danilkapodlipaev-droid/chatburg/releases/latest" data-ru="⬇ Скачать v3" data-en="⬇ Download v3">⬇ Скачать v3</a>
+<a class="btn play" href="play/" data-ru="🎮 Играть в браузере" data-en="🎮 Play in browser">🎮 Играть в браузере</a><a class="btn alt" href="https://evkakuy228.itch.io/chatburg-game">itch.io ↗</a></div>
+<p class="small" data-ru="Бесплатно · Windows · Godot 4" data-en="Free · Windows · Godot 4">Бесплатно · Windows · Godot 4</p>
+<img class="heroimg" src="img/225_sunset_after.webp" alt="Chatburg на закате" width="1600" height="900">
+</div></header>
+
+<section class="stats"><div class="wrap counters">
+<div><b data-n="1663">0</b><span data-ru="зданий" data-en="buildings">зданий</span></div><div><b data-n="510">0</b><span data-ru="машин" data-en="cars">машин</span></div><div><b data-n="154">0</b><span data-ru="редких жителей" data-en="rare citizens">редких жителей</span></div><div><b data-n="37" id="ncmd">0</b><span data-ru="команд чата" data-en="chat commands">команд чата</span></div></div></section>
+<section class="rv" id="features"><div class="wrap"><h2 data-ru="Что тут вообще происходит" data-en="What's going on here">Что тут вообще происходит</h2>
+<div class="grid" id="fgrid"></div></div></section>
+
+<section class="rv" id="gallery" class="paper"><div class="wrap"><h2 data-ru="Скриншоты" data-en="Screenshots">Скриншоты</h2><div class="gal" id="gal"></div></div></section>
+
+<section class="rv" id="commands"><div class="wrap"><h2 data-ru="Команды чата" data-en="Chat commands">Команды чата</h2>
+<p data-ru="Зрители пишут в чат — город меняется. Полный список есть в игре (Помощь / Энциклопедия)." data-en="Viewers type in chat — the city changes. Full list in-game (Help / Encyclopedia).">Зрители пишут в чат — город меняется. Полный список есть в игре (Помощь / Энциклопедия).</p>
+<div class="cmds" id="cmds"></div></div></section>
+
+<section class="rv" id="changelog" class="paper"><div class="wrap"><h2 data-ru="Что нового в v3" data-en="What's new in v3">Что нового в v3</h2><ul class="log" id="log"></ul></div></section>
+
+<section class="rv" id="play" class="paper"><div class="wrap playbox"><div><h2 data-ru="Играть в браузере" data-en="Play in browser">Играть в браузере</h2>
+<p data-ru="Упрощённая веб-версия из того же проекта: маленькая карта, фейковый чат, лёгкая графика. Без установки — прямо тут." data-en="A simplified web build of the same project: small map, fake chat, light graphics. No install.">Упрощённая веб-версия из того же проекта: маленькая карта, фейковый чат, лёгкая графика. Без установки — прямо тут.</p>
+<a class="btn big" href="play/" data-ru="🎮 Играть в браузере" data-en="🎮 Play in browser">🎮 Играть в браузере</a> <span class="small" id="playsize"></span></div><a href="play/"><img src="img/play_t.webp" alt="Chatburg web" loading="lazy" width="640" height="360"></a></div></section>
+<section class="rv" id="req"><div class="wrap two">
+<div class="card"><h3 data-ru="Системные требования" data-en="System requirements">Системные требования</h3><ul id="reqs"></ul></div>
+<div class="card"><h3 data-ru="Поддержать" data-en="Support">Поддержать</h3><p data-ru="Лучшая поддержка — поставить игру на стрим, оценить на itch.io и звёздочку на GitHub." data-en="Best support: play it on stream, rate on itch.io and star on GitHub.">Лучшая поддержка — поставить игру на стрим, оценить на itch.io и звёздочку на GitHub.</p><p><a class="btn" href="https://boosty.to/evkakuy228" target="_blank">Boosty ❤</a></p>
+<a class="btn alt" href="https://evkakuy228.itch.io/chatburg-game">itch.io</a> <a class="btn alt" href="https://github.com/danilkapodlipaev-droid/chatburg">GitHub ★</a></div></div></section>
+
+<section class="rv" id="faq" class="paper"><div class="wrap"><h2>FAQ</h2><div id="faqs"></div></div></section>
+
+<footer><div class="wrap">© 2026 Даниил (Evkakuy228). <span data-ru="Все права защищены." data-en="All rights reserved.">Все права защищены.</span> · <a href="https://github.com/danilkapodlipaev-droid/chatburg">GitHub</a> · <a href="https://evkakuy228.itch.io/chatburg-game">itch.io</a><br><span class="small" data-ru="Все бренды в игре — пародии." data-en="All brands in the game are parodies.">Все бренды в игре — пародии.</span></div></footer>
+<div id="lb" hidden><button class="x" aria-label="close">✕</button><button class="pv">‹</button><img alt=""><button class="nx">›</button><p></p></div>
+<canvas id="confetti" aria-hidden="true"></canvas><script src="app.js?v=202610111830" defer></script></body></html>

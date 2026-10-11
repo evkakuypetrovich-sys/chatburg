@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://danilkapodlipaev-droid.github.io/chatburg/sitemap.xml

@@ -1,0 +1,66 @@
+# Rebuild the Chatburg web version (/play/) from the Godot project and deploy the whole site to GitHub Pages.
+# Game source: the "game/" folder of this repo if it exists, otherwise the repo in variable GAME_REPO
+# (private repo → add secret GAME_REPO_TOKEN). Pages → Source must be "GitHub Actions".
+name: web
+on:
+  push:
+    branches: [main]
+  release:
+    types: [published]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency: { group: pages, cancel-in-progress: true }
+env:
+  GODOT_VERSION: 4.7.2
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout game source (external)
+        if: ${{ hashFiles('game/project.godot') == '' && vars.GAME_REPO != '' }}
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.GAME_REPO }}
+          token: ${{ secrets.GAME_REPO_TOKEN || github.token }}
+          path: game
+      - name: Cache Godot
+        uses: actions/cache@v4
+        with:
+          path: ~/godot
+          key: godot-${{ env.GODOT_VERSION }}-web
+      - name: Install Godot + web templates
+        run: |
+          set -e
+          V=$GODOT_VERSION; mkdir -p ~/godot; cd ~/godot
+          B=https://github.com/godotengine/godot-builds/releases/download/$V-stable
+          [ -f godot ] || { curl -sSL -o g.zip $B/Godot_v$V-stable_linux.x86_64.zip; unzip -q g.zip; mv Godot_v$V-stable_linux.x86_64 godot; rm g.zip; }
+          if [ ! -f tpl/web_nothreads_release.zip ]; then
+            curl -sSL -o t.tpz $B/Godot_v$V-stable_export_templates.tpz
+            unzip -q -j t.tpz 'templates/web_nothreads_release.zip' 'templates/web_release.zip' 'templates/version.txt' -d tpl; rm t.tpz
+          fi
+          D=~/.local/share/godot/export_templates/$V.stable; mkdir -p $D; cp tpl/* $D/
+      - name: Build web version
+        run: |
+          if [ -f game/tools/build_web.sh ]; then
+            GODOT=~/godot/godot bash game/tools/build_web.sh "$GITHUB_WORKSPACE"
+          else
+            echo "No game source found — keeping committed play/ folder"
+          fi
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp -r index.html style.css app.js img play robots.txt sitemap.xml favicon.ico .nojekyll _site/ 2>/dev/null || true
+          [ -f CNAME ] && cp CNAME _site/ || true
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: _site }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: '${{ steps.d.outputs.page_url }}' }
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4
