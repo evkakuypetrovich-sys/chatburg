@@ -200,3 +200,5 @@ h2{background:linear-gradient(90deg,var(--pine),#ffd23f)}
 .cbbox{background:var(--paper);border:3px solid var(--ink);border-radius:16px;box-shadow:var(--sh);width:min(720px,100%);max-height:90vh;overflow:auto;padding:16px 18px;position:relative}
 .cbbox h3{margin:0 0 4px}.cbx{position:absolute;top:8px;right:10px;border:2px solid var(--ink);border-radius:8px;background:var(--red);color:#fff;font-weight:900;cursor:pointer}
 @media(max-width:520px){.cbbar{font-size:13px;gap:5px}.cbbar>span,.cbbar button{padding:2px 7px}}
+
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}.vcard{margin:0;background:#fff;border:3px solid var(--ink);border-radius:14px;overflow:hidden;box-shadow:var(--sh);transition:.15s}.vcard:nth-child(odd){transform:rotate(-.6deg)}.vcard:hover{transform:rotate(0) scale(1.02)}.vcard video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:var(--ink)}.vcard figcaption{padding:8px 12px;font-weight:900}
