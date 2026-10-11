@@ -2,7 +2,7 @@
   "repo": "evkakuypetrovich-sys/chatburg",
   "web": {"name": "Веб-версия", "name_en": "Web version", "url": "play/", "note": "Играть прямо в браузере, без установки", "note_en": "Play in the browser, no install", "size": "~45 МБ"},
   "versions": [
-    {"id": "v3", "name": "Chatburg v3", "tag": "v3.0.0", "date": "2026-10-11", "size": "", "itch": "https://evkakuy228.itch.io/chatburg",
+    {"id": "v3", "name": "Chatburg v3", "tag": "v3.0.0", "date": "2026-10-11", "size": "45 МБ", "itch": "https://evkakuy228.itch.io/chatburg",
      "note": "Живые стройки, дорожные работы, дрифт, зима", "note_en": "Live construction, roadworks, drift, winter"},
     {"id": "v2", "name": "Chatburg v2", "tag": "v2.0.0", "date": "2026-10-09", "size": "47 МБ", "itch": "https://evkakuy228.itch.io/chatburg",
      "note": "Карандашные дороги, перья стилей, каталог-тетрадка", "note_en": "Pencil roads, style pens, notebook catalog"},
