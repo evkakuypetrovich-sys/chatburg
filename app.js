@@ -52,3 +52,28 @@ function burst(x,y){if(RM)return;cv.width=innerWidth;cv.height=innerHeight;const
 function step(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(p=>p.l-->0);P.forEach(p=>{p.vy+=.35;p.x+=p.vx;p.y+=p.vy;p.a+=.2;cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.fillRect(-p.r,-p.r/2,p.r*2,p.r);cx.restore()});if(P.length)requestAnimationFrame(step);else cx.clearRect(0,0,cv.width,cv.height)}
 document.getElementById("dl").addEventListener("click",e=>burst(e.clientX,e.clientY));
 fetch("play/version.json",{cache:"no-store"}).then(r=>r.json()).then(v=>{document.getElementById("playsize").textContent=`web v${v.version} · ~45 МБ`}).catch(()=>{});
+
+/* ---- video section collapse ---- */
+(function(){
+  const sec=document.getElementById("video"),btn=document.getElementById("vtoggle"),panel=document.getElementById("vcoll");
+  if(!sec||!btn||!panel)return;
+  const KEY="cb_video_collapsed";
+  const labels={open:{ru:"Свернуть ▲",en:"Collapse ▲"},shut:{ru:"Развернуть ▼",en:"Expand ▼"}};
+  function pauseVids(){sec.querySelectorAll("video").forEach(v=>{try{v.pause()}catch(_){}})}
+  function apply(collapsed,persist){
+    panel.classList.toggle("is-collapsed",collapsed);
+    btn.setAttribute("aria-expanded",collapsed?"false":"true");
+    const L=collapsed?labels.shut:labels.open;
+    btn.dataset.ru=L.ru;btn.dataset.en=L.en;
+    btn.textContent=L[typeof lang!=="undefined"?lang:"ru"]||L.ru;
+    if(collapsed)pauseVids();
+    if(persist!==false){if(collapsed)localStorage.setItem(KEY,"1");else localStorage.removeItem(KEY)}
+  }
+  function expand(){apply(false)}
+  apply(localStorage.getItem(KEY)==="1",false);
+  btn.addEventListener("click",()=>apply(panel.classList.contains("is-collapsed")?false:true));
+  function maybeExpandFromHash(){if(location.hash==="#video")expand()}
+  maybeExpandFromHash();
+  addEventListener("hashchange",maybeExpandFromHash);
+  document.querySelectorAll('a[href="#video"]').forEach(a=>a.addEventListener("click",()=>expand()));
+})();
