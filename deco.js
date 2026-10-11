@@ -22,22 +22,8 @@ const stats=$(".stats");if(stats){const items=RU()?["🏠 <b>1663</b> здани
 // footer builders
 const ft=$("footer");if(ft&&!RM){const b=(c,d)=>`<div class="builder" style="animation-delay:${d}s"><svg viewBox="0 0 30 46" width="30" height="46"><g stroke="#2a1a4a" stroke-width="2"><path d="M7 10a8 8 0 0 1 16 0z" fill="${c}"/><circle cx="15" cy="15" r="6" fill="#ffe0b0"/><path d="M9 17q6 12 12 0" fill="#6b4a2a"/><rect x="9" y="22" width="12" height="13" rx="3" fill="#ff8c2a"/><path d="M11 35l-2 10M19 35l2 10" stroke-width="3"/></g></svg></div>`;
  ft.insertAdjacentHTML("afterbegin",b("#ffd23f",0)+b("#ffd23f",-6)+b("#f7b733",-13)+b("#ffd23f",-19))}
-// live city strip with a drifting car leaving tire marks
-if(ft){ft.insertAdjacentHTML("beforebegin",'<div class="livecity" aria-hidden="true"><canvas></canvas></div>');const cv=$(".livecity canvas"),cx=cv.getContext("2d");let W,H,marks=[],t=0,vis=true;
- const rs=()=>{W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight};rs();addEventListener("resize",rs);
- new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
- const houses=[...Array(40)].map((_,i)=>({x:i*70+10,w:40+(i*13%20),h:30+(i*29%50),c:["#6b3fa0","#ff8c2a","#7ec8f0","#f7b733","#ff5a5f","#3ecf8e"][i%6]}));
- const cars=[...Array(5)].map((_,i)=>({x:i*300,v:1.2+i*.35,lane:i%2,c:["#ff5a5f","#7ec8f0","#3ecf8e","#f7b733","#6b3fa0"][i]}));const dr={x:-100,y:0,a:0,ph:0};
- function car(x,y,c,a){cx.save();cx.translate(x,y);cx.rotate(a);cx.fillStyle=c;cx.strokeStyle="#2a1a4a";cx.lineWidth=2.5;cx.beginPath();cx.roundRect(-18,-8,36,16,5);cx.fill();cx.stroke();cx.fillStyle="#cfe8ff";cx.fillRect(2,-6,8,12);cx.restore()}
- function draw(){requestAnimationFrame(draw);if(!vis)return;t++;cx.clearRect(0,0,W,H);const road=H-50;
-  houses.forEach(h=>{const x=(h.x-t*.2)%(W+100);const X=x<-60?x+W+140:x;cx.fillStyle=h.c;cx.strokeStyle="#2a1a4a";cx.lineWidth=2.5;cx.fillRect(X,road-h.h-8,h.w,h.h);cx.strokeRect(X,road-h.h-8,h.w,h.h);cx.fillStyle="#ffd23f";cx.fillRect(X+8,road-h.h,8,8)});
-  cx.fillStyle="#3b4256";cx.fillRect(0,road,W,44);cx.strokeStyle="#fff";cx.setLineDash([20,16]);cx.lineWidth=2;cx.beginPath();cx.moveTo(0,road+22);cx.lineTo(W,road+22);cx.stroke();cx.setLineDash([]);
-  marks.forEach(m=>{m.l-=.004;cx.fillStyle=`rgba(20,15,30,${Math.max(0,m.l)*.6})`;cx.fillRect(m.x,m.y,3,3)});marks=marks.filter(m=>m.l>0);
-  cars.forEach(c=>{c.x+=c.lane?-c.v:c.v;if(c.x>W+40)c.x=-40;if(c.x<-40)c.x=W+40;car(c.x,road+(c.lane?33:11),c.c,c.lane?Math.PI:0)});
-  dr.x+=3.2;dr.ph+=.05;const drift=Math.sin(dr.ph);dr.y=road+22+drift*10;dr.a=drift*.5;if(dr.x>W+60){dr.x=-80;}
-  if(Math.abs(drift)>.4){for(const s of[-1,1])marks.push({x:dr.x-14*Math.cos(dr.a)-s*7*Math.sin(dr.a),y:dr.y-14*Math.sin(dr.a)+s*7*Math.cos(dr.a),l:1})}
-  car(dr.x,dr.y,"#ff8c2a",dr.a);if(Math.abs(drift)>.6){cx.fillStyle="rgba(255,255,255,.5)";cx.beginPath();cx.arc(dr.x-24,dr.y,6+Math.random()*4,0,7);cx.fill()}}
- if(!RM)draw();else{rs();t=0;vis=true;draw=()=>{};}}
+// live city strip (drawn by cars.js)
+if(ft){ft.insertAdjacentHTML("beforebegin",'<div class="livecity" aria-hidden="true"><canvas></canvas></div>');const sc=document.createElement("script");sc.src="cars.js?v="+(document.querySelector('script[src*="deco.js"]').src.split("v=")[1]||"");sc.defer=true;document.body.appendChild(sc)}
 // doodle parallax background
 const dd=document.createElement("div");dd.className="doodles";document.body.prepend(dd);
 if(!RM){let tk=0;addEventListener("scroll",()=>{if(tk)return;tk=requestAnimationFrame(()=>{dd.style.transform=`translate3d(0,${-scrollY*.08}px,0)`;tk=0})},{passive:true});
