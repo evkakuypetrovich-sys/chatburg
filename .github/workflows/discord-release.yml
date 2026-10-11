@@ -1,0 +1,39 @@
+name: Discord release announce
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag (test)"
+        required: true
+        default: "test"
+      body:
+        description: "Notes (test)"
+        required: false
+        default: "Тестовый запуск"
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post to Discord
+        env:
+          PATCH: ${{ secrets.DISCORD_WEBHOOK_PATCH }}
+          ANNOUNCE: ${{ secrets.DISCORD_WEBHOOK_ANNOUNCE }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+          BODY: ${{ github.event.release.body || inputs.body }}
+          URL: ${{ github.event.release.html_url || format('https://github.com/{0}/releases', github.repository) }}
+        run: |
+          set -euo pipefail
+          SITE="https://evkakuypetrovich-sys.github.io/chatburg/"
+          ITCH="https://evkakuy228.itch.io"
+          NOTES="${BODY:-Без описания}"
+          NOTES="${NOTES:0:4000}"
+          jq -n --arg t "Chatburg $TAG вышла!" --arg d "$NOTES" --arg u "$URL" \
+            '{username:"Chatburg Updates",embeds:[{title:$t,description:$d,url:$u,color:16744448}]}' > patch.json
+          jq -n --arg t "Chatburg $TAG вышла!" --arg u "$URL" --arg s "$SITE" --arg i "$ITCH" \
+            '{username:"Chatburg Updates",embeds:[{title:$t,url:$u,color:16744448,
+              description:("Новая версия уже доступна! 🎉\n\n📝 Патчноут: "+$u+"\n🌐 Сайт: "+$s+"\n🎮 itch.io: "+$i)}]}' > ann.json
+          curl -fsS -H "Content-Type: application/json" -d @patch.json "$PATCH" -o /dev/null
+          curl -fsS -H "Content-Type: application/json" -d @ann.json "$ANNOUNCE" -o /dev/null
+          echo "Posted $TAG"
