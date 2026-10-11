@@ -1,10 +1,54 @@
 {
-  "_doc": "Ads for the side/inline slots. Only games & gaming. Fields: id, title, link, image_v (160x600), image_r (300x250), weight (higher = more often), start/end (YYYY-MM-DD, optional), house (true = own promo). See README_ADS.md.",
+  "_doc": "Ads for the side/inline slots. Only games & gaming. Fields: id, title, link, image_v (160x600), image_r (300x250), weight (higher = more often), start/end (YYYY-MM-DD, optional), house (true = own promo). See README_ADS.md. The single card slot on the main page uses image_r (300x250) + headline + text + cta.",
   "rotate_seconds": 15,
   "ads": [
-    {"id": "discord", "title": "Chatburg Discord — сообщество", "link": "https://discord.gg/Z9u2evqPM", "image_v": "img/ads/discord_v.webp", "image_r": "img/ads/discord_r.webp", "weight": 3, "house": true},
-    {"id": "boosty", "title": "Поддержать Chatburg на Boosty", "link": "https://boosty.to/evkakuy228", "image_v": "img/ads/boosty_v.webp", "image_r": "img/ads/boosty_r.webp", "weight": 2, "house": true},
-    {"id": "play", "title": "Chatburg — играть в браузере", "link": "play/", "image_v": "img/ads/play_v.webp", "image_r": "img/ads/play_r.webp", "weight": 2, "house": true},
-    {"id": "itch", "title": "Chatburg на itch.io", "link": "https://evkakuy228.itch.io/chatburg", "image_v": "img/ads/itch_v.webp", "image_r": "img/ads/itch_r.webp", "weight": 1, "house": true}
+    {
+      "id": "discord",
+      "title": "Chatburg Discord — сообщество",
+      "link": "https://discord.gg/Z9u2evqPM",
+      "image_v": "img/ads/discord_v.webp",
+      "image_r": "img/ads/discord_r.webp",
+      "weight": 3,
+      "house": true,
+      "headline": "Заходи в Discord Чатбурга",
+      "text": "Новости, моды, мемы и общение с другими игроками.",
+      "cta": "Вступить"
+    },
+    {
+      "id": "boosty",
+      "title": "Поддержать Chatburg на Boosty",
+      "link": "https://boosty.to/evkakuy228",
+      "image_v": "img/ads/boosty_v.webp",
+      "image_r": "img/ads/boosty_r.webp",
+      "weight": 2,
+      "house": true,
+      "headline": "Поддержи Чатбург на Boosty",
+      "text": "Помоги развитию игры — каждая поддержка приближает новые версии.",
+      "cta": "Поддержать"
+    },
+    {
+      "id": "play",
+      "title": "Chatburg — играть в браузере",
+      "link": "play/",
+      "image_v": "img/ads/play_v.webp",
+      "image_r": "img/ads/play_r.webp",
+      "weight": 2,
+      "house": true,
+      "headline": "Играй в браузере",
+      "text": "Веб-версия Чатбурга — без установки, прямо на сайте.",
+      "cta": "Играть"
+    },
+    {
+      "id": "itch",
+      "title": "Chatburg на itch.io",
+      "link": "https://evkakuy228.itch.io/chatburg",
+      "image_v": "img/ads/itch_v.webp",
+      "image_r": "img/ads/itch_r.webp",
+      "weight": 1,
+      "house": true,
+      "headline": "Chatburg на itch.io",
+      "text": "Скачай, оцени и оставь отзыв — это очень помогает.",
+      "cta": "Открыть"
+    }
   ]
 }

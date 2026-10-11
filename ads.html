@@ -3,13 +3,13 @@
 <title>Реклама на сайте Chatburg — для рекламодателей</title>
 <meta name="description" content="Разместить рекламу игры на сайте Chatburg: форматы баннеров, правила (только игры и гейминг) и заявка.">
 <link rel="canonical" href="https://evkakuypetrovich-sys.github.io/chatburg/ads.html">
-<link rel="icon" href="favicon.ico"><link rel="stylesheet" href="style.css?v=202610111847"></head><body>
+<link rel="icon" href="favicon.ico"><link rel="stylesheet" href="style.css?v=202610111849"></head><body>
 <nav class="top"><a href="./" class="brand">Chatburg</a><div class="links"><a href="./">← На главную</a><a href="versions.html">Версии</a><a href="play/">Играть</a><a href="ads.html">Реклама</a></div></nav>
 <header class="hero" style="padding:40px 0 10px"><div class="wrap"><h1 class="logo" style="font-size:clamp(40px,8vw,84px)">Рекла<span>ма</span></h1><p class="tag">Покажите свою игру стримерам и зрителям Чатбурга.</p></div></header>
 <section><div class="wrap two">
 <div class="card"><h3>Форматы</h3><ul>
-<li><b>Боковой баннер</b> — 160×600 (слева и справа, только на широких экранах ≥1500px, «прилипает» при прокрутке)</li>
-<li><b>Встроенный блок</b> — 300×250 (между разделами, на ноутбуках и телефонах)</li>
+<li><b>Карточка партнёра</b> на главной странице: картинка 300×250 + заголовок, короткий текст и кнопка</li>
+
 <li>Форматы: WebP/PNG/JPG до 150 КБ, без звука и мигания. Ротация каждые ~15 секунд с плавной сменой.</li>
 <li>Метка «Реклама» всегда видна, ссылки помечены rel="sponsored".</li></ul></div>
 <div class="card"><h3>Правила</h3><ul>
@@ -23,7 +23,7 @@
 <form id="adform" class="card adform">
 <label>Название игры / проекта<input name="game" required maxlength="80"></label>
 <label>Ссылка на игру<input name="link" type="url" required placeholder="https://store.steampowered.com/app/…"></label>
-<label>Формат<select name="fmt"><option>Боковой 160×600</option><option>Встроенный 300×250</option><option>Оба</option></select></label>
+<label>Формат<select name="fmt"><option>Карточка на главной (300×250 + текст)</option></select></label>
 <label>Срок<input name="dates" placeholder="например, 1–31 ноября"></label>
 <label>Контакт (email / Discord / Telegram)<input name="contact" required maxlength="100"></label>
 <label>Комментарий<textarea name="msg" rows="4" maxlength="1000"></textarea></label>
@@ -35,4 +35,4 @@
 document.getElementById("adform").addEventListener("submit",e=>{e.preventDefault();const f=new FormData(e.target);
 const body=`Игра: ${f.get("game")}\nСсылка: ${f.get("link")}\nФормат: ${f.get("fmt")}\nСрок: ${f.get("dates")}\nКонтакт: ${f.get("contact")}\n\n${f.get("msg")}\n\n(Подтверждаю соответствие правилам: только игры, без 18+/казино/скама.)`;
 location.href=`mailto:evkakuypetrovich@gmail.com?subject=${encodeURIComponent("Реклама на сайте Chatburg: "+f.get("game"))}&body=${encodeURIComponent(body)}`});
-</script><script src="deco.js?v=202610111847" defer></script></body></html>
+</script><script src="deco.js?v=202610111849" defer></script></body></html>

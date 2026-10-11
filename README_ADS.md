@@ -1,15 +1,15 @@
 # Реклама на сайте Chatburg — как добавить объявление
 
-Слоты: боковые 160×600 (слева/справа, экраны ≥1500px) и встроенный 300×250 (между разделами, ноутбуки/телефоны).
+Слот: одна карточка «Партнёры · Реклама» на главной (между скриншотами и командами), ротация каждые 15 с. Нужна картинка 300×250 и тексты headline / text / cta.
 Всё управляется файлом **`ads.json`** — код трогать не нужно.
 
 ## Добавить рекламу
-1. Положите две картинки в `img/ads/`: `<id>_v.webp` (160×600) и `<id>_r.webp` (300×250), до 150 КБ каждая.
+1. Положите картинку `img/ads/<id>_r.webp` (300×250, до 150 КБ).
 2. Добавьте объект в массив `ads` в `ads.json`:
    ```json
    {"id": "mygame", "title": "My Game — demo в Steam", "link": "https://store.steampowered.com/app/123",
-    "image_v": "img/ads/mygame_v.webp", "image_r": "img/ads/mygame_r.webp",
-    "weight": 3, "start": "2026-11-01", "end": "2026-11-30"}
+    "image_r": "img/ads/mygame_r.webp",
+    "headline": "My Game", "text": "Короткое описание", "cta": "В Steam", "weight": 3, "start": "2026-11-01", "end": "2026-11-30"}
    ```
    * `weight` — как часто показывать (чем больше, тем чаще).
    * `start` / `end` — даты показа (необязательно). После `end` объявление пропадает само.
@@ -23,7 +23,7 @@
 evkakuypetrovich@gmail.com (форма на `ads.html`) или в Discord https://discord.gg/Z9u2evqPM.
 
 ## РСЯ (Яндекс) / Google AdSense
-В конце `index.html` и `versions.html` перед `<footer>` есть закомментированный блок.
+В конце `index.html` перед `<footer>` есть закомментированный блок.
 1. Зарегистрируйтесь в РСЯ (partner.yandex.ru) или AdSense, добавьте сайт `evkakuypetrovich-sys.github.io/chatburg` и дождитесь одобрения.
 2. Замените `R-A-XXXXXXX-1` / `ca-pub-XXXXXXXXXXXXXXXX` / `data-ad-slot` на свои ID и раскомментируйте блок.
 3. Для AdSense положите в корень `ads.txt` со строкой `google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0`.
