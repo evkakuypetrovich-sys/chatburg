@@ -189,6 +189,6 @@ h2{background:linear-gradient(90deg,var(--pine),#ffd23f)}
 .platgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
 .plat{display:flex;gap:12px;align-items:center;background:#fff;border:3px solid var(--ink);border-radius:14px;padding:12px 14px;box-shadow:var(--sh);text-decoration:none;color:var(--ink);transition:transform .15s,box-shadow .15s}
 .plat:hover,.plat:focus-visible{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink),0 0 18px rgba(255,140,42,.45)}
-.pi{font-size:28px;width:46px;height:46px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--pine),var(--org));border:2px solid var(--ink);flex:none}
+.pi{font-size:28px;width:46px;height:46px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--pine),var(--org));border:2px solid var(--ink);flex:none}.pi svg{width:28px;height:28px;display:block}
 .plat b{display:block}.plat small{opacity:.7}
 .footlinks{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 10px;margin-bottom:12px;font-size:14px}
