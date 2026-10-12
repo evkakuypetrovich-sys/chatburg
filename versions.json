@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v4.6.2",
+   "name": "Chatburg v4.6.2",
+   "tag": "v4.6.2",
+   "date": "2026-10-13",
+   "size": "51 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.6.2/Chatburg_v4.6.2_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.6.2/Chatburg_v4.6.2.apk",
+   "apk_size": "40 МБ",
+   "note": "Плавное перетаскивание и изменение размера мини-плеера музыки",
+   "note_en": "Smooth dragging and resizing of the music mini-player"
+  },
+  {
    "id": "v4.6.1",
    "name": "Chatburg v4.6.1",
    "tag": "v4.6.1",
