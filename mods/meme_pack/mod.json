@@ -1,0 +1,242 @@
+{
+ "id": "meme_pack",
+ "name": "Мемы СНГ / CIS memes",
+ "version": "1.0",
+ "author": "Chatburg",
+ "description": "Пародийные мемы рунета и TikTok (без чужих логотипов и аудио): !67, !пантера, !черемша, !воздухан, !бурмалда, !котость, !зачем. Parody CIS internet/TikTok memes.",
+ "events": [
+  {
+   "id": "six_seven",
+   "command": [
+    "67",
+    "сиксевен",
+    "sixseven"
+   ],
+   "cost": 67,
+   "effect": "parade",
+   "color": "#ffd166",
+   "news": {
+    "ru": "{user} крикнул «СИКС-СЕВЕН!» — весь город взвешивает руками 🤲",
+    "en": "{user} yelled \"SIX-SEVEN!\" — the whole city does the hand gesture 🤲"
+   }
+  },
+  {
+   "id": "panther",
+   "command": [
+    "пантера",
+    "танцуйпантера",
+    "panther"
+   ],
+   "cost": 150,
+   "effect": "party",
+   "news": {
+    "ru": "{user}: «Танцуй, пантера!» — в городе начинается дискотека 🐆",
+    "en": "{user}: \"Dance, panther!\" — a disco breaks out 🐆"
+   }
+  },
+  {
+   "id": "cheremsha",
+   "command": [
+    "черемша",
+    "cheremsha"
+   ],
+   "cost": 120,
+   "effect": "ufo",
+   "news": {
+    "ru": "{user} позвал Черемшу — заяц с головой льва пролетел над городом 🦁🐇",
+    "en": "{user} summoned Cheremsha — a lion-headed hare flew over town 🦁🐇"
+   }
+  },
+  {
+   "id": "vozdukhan",
+   "command": [
+    "воздухан",
+    "vozdukhan"
+   ],
+   "cost": 80,
+   "effect": "weather",
+   "weather": "fog",
+   "duration": 60,
+   "news": {
+    "ru": "{user} надул воздухана — город в тумане 💨",
+    "en": "{user} pumped up the air-head — the city is foggy 💨"
+   }
+  },
+  {
+   "id": "burmalda",
+   "command": [
+    "бурмалда",
+    "burmalda"
+   ],
+   "cost": 100,
+   "effect": "coins",
+   "amount": 25,
+   "news": {
+    "ru": "{user} устроил бурмалду и сорвал 25 монет 🎰",
+    "en": "{user} threw a burmalda and won 25 coins 🎰"
+   }
+  },
+  {
+   "id": "kotost",
+   "command": [
+    "котость",
+    "kotost"
+   ],
+   "cost": 60,
+   "effect": "confetti",
+   "news": {
+    "ru": "{user} включил котость — город стал на 30% мягче 🐈",
+    "en": "{user} turned on cat-ness — the city is 30% fluffier 🐈"
+   }
+  },
+  {
+   "id": "zachem",
+   "command": [
+    "зачем",
+    "можноазачем"
+   ],
+   "cost": 40,
+   "effect": "fireworks",
+   "count": 3,
+   "news": {
+    "ru": "{user}: «Можно. А зачем?» — мэрия задумалась 🤔",
+    "en": "{user}: \"Sure. But why?\" — city hall is pondering 🤔"
+   }
+  },
+  {
+   "id": "tralalero",
+   "command": [
+    "тралалело",
+    "тралалёша",
+    "tralalero"
+   ],
+   "cost": 67,
+   "effect": "parade",
+   "news": {
+    "ru": "{user} запустил парад Тралалёши — акулы в кроссовках маршируют! 🦈👟",
+    "en": "{user} started Tralalyosha's parade — sharks in sneakers march! 🦈👟"
+   }
+  },
+  {
+   "id": "sigma",
+   "command": [
+    "сигма",
+    "sigma"
+   ],
+   "cost": 67,
+   "effect": "confetti",
+   "news": {
+    "ru": "{user} включил сигма-режим. Город делает серьёзное лицо 😎",
+    "en": "{user} enabled sigma mode. The city makes a serious face 😎"
+   }
+  },
+  {
+   "id": "zhdun",
+   "command": [
+    "ждун",
+    "zhdun"
+   ],
+   "cost": 67,
+   "effect": "weather",
+   "news": {
+    "ru": "{user} ждёт… и весь город ждёт вместе с ним ☁",
+    "en": "{user} is waiting… and the whole city waits too ☁"
+   },
+   "weather": "fog",
+   "duration": 60
+  },
+  {
+   "id": "shlyopa",
+   "command": [
+    "шлёпа",
+    "шлепа",
+    "floppa"
+   ],
+   "cost": 67,
+   "effect": "party",
+   "news": {
+    "ru": "{user} позвал Шлёпыча — вечеринка у большого кота! 🐱",
+    "en": "{user} called Floppich — party at the big cat's! 🐱"
+   }
+  },
+  {
+   "id": "chipichapa",
+   "command": [
+    "чипичапа",
+    "chipichapa"
+   ],
+   "cost": 67,
+   "effect": "party",
+   "news": {
+    "ru": "{user}: чипи-чипи-чапа-чапа! Коты танцуют 🐈",
+    "en": "{user}: chipi-chipi-chapa-chapa! Cats are dancing 🐈"
+   }
+  },
+  {
+   "id": "gigachel",
+   "command": [
+    "гигачад",
+    "гигачел",
+    "gigachad"
+   ],
+   "cost": 150,
+   "effect": "fireworks",
+   "news": {
+    "ru": "{user} — настоящий гигачел. Салют в его честь 💪",
+    "en": "{user} is a true gigachel. Fireworks in their honour 💪"
+   }
+  },
+  {
+   "id": "bober",
+   "command": [
+    "бобр",
+    "бобер",
+    "bober"
+   ],
+   "cost": 67,
+   "effect": "confetti",
+   "news": {
+    "ru": "{user} крикнул «БОБР!» — эхо слышно на весь город 🦫",
+    "en": "{user} yelled \"BOBER!\" — the echo is heard all over town 🦫"
+   }
+  },
+  {
+   "id": "tungtung",
+   "command": [
+    "тунгтунг",
+    "сахур",
+    "tungtung"
+   ],
+   "cost": 67,
+   "effect": "parade",
+   "news": {
+    "ru": "{user}: тунг-тунг-тунг… Сахурыч будит весь город 🥁",
+    "en": "{user}: tung-tung-tung… Sahurych wakes the whole city 🥁"
+   }
+  }
+ ],
+ "names": [
+  "Черемша",
+  "Воздухан",
+  "Сикс Севен",
+  "Филяй",
+  "Бурмалдыч",
+  "Котостин",
+  "Нишевый Нил",
+  "Ларпыч"
+ ],
+ "news": [
+  {
+   "ru": "Опрос: 67% жителей ответили «сикс-севен» на вопрос о погоде",
+   "en": "Poll: 67% of residents answered \"six-seven\" when asked about the weather"
+  },
+  {
+   "ru": "В коттедже «Пантера» снова дискотека, соседи вызвали ДПС",
+   "en": "Disco at the Panther cottage again, neighbours called the traffic police"
+  },
+  {
+   "ru": "Черемшу видели над ЖК «Берёзка». Учёные: «Это не лев и не заяц»",
+   "en": "Cheremsha seen over the Birch estate. Scientists: \"Neither lion nor hare\""
+  }
+ ]
+}

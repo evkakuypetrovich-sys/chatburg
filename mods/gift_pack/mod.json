@@ -1,0 +1,14 @@
+{
+ "id": "gift_pack",
+ "name": "Подарки / Gift pack",
+ "version": "1.0",
+ "author": "Chatburg",
+ "description": "Пример мода с 3D-моделью .glb: подарок как декор (!декор подарок) и команда !подарок. Example mod with a .glb model.",
+ "decor": [
+  {"id": "gift_box", "name": {"ru": "Подарок", "en": "Gift box"}, "cost": 60, "model": "gift_box.glb", "scale": 1.0}
+ ],
+ "events": [
+  {"id": "gift_rain", "command": ["подарок", "gift"], "cost": 100, "effect": "coins", "amount": 30,
+   "news": {"ru": "{user} раздаёт подарки!", "en": "{user} hands out gifts!"}}
+ ]
+}

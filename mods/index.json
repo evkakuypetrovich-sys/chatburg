@@ -1,0 +1,64 @@
+{
+ "version": 1,
+ "updated": "2026-10-12",
+ "mods": [
+  {
+   "id": "gift_pack",
+   "icon": "🎁",
+   "name": {
+    "ru": "Подарки",
+    "en": "Gift pack"
+   },
+   "description": {
+    "ru": "3D-подарок как декор (!декор подарок) и команда !подарок. Пример мода с моделью .glb.",
+    "en": "A 3D gift as decor (!decor gift) and the !gift command. Example mod with a .glb model."
+   },
+   "author": "Chatburg",
+   "version": "1.0",
+   "files": [
+    "gift_box.glb",
+    "mod.json"
+   ],
+   "size": 6785,
+   "min_game": "4.3.0"
+  },
+  {
+   "id": "meme_pack",
+   "icon": "😂",
+   "name": {
+    "ru": "Мемы СНГ",
+    "en": "CIS memes"
+   },
+   "description": {
+    "ru": "Пародийные мемы рунета и TikTok: !67, !пантера, !черемша, !воздухан и другие (без чужих логотипов и аудио).",
+    "en": "Parody RU-internet and TikTok memes: !67, !panther and more (no third-party logos or audio)."
+   },
+   "author": "Chatburg",
+   "version": "1.0",
+   "files": [
+    "mod.json"
+   ],
+   "size": 6360,
+   "min_game": "4.3.0"
+  },
+  {
+   "id": "winter_pack",
+   "icon": "❄",
+   "name": {
+    "ru": "Зимний пак",
+    "en": "Winter pack"
+   },
+   "description": {
+    "ru": "Два зимних стиля, снеговик, команды !снегопад и !ёлка, ледяной цвет.",
+    "en": "Two winter styles, a snowman, !snowfall and !tree commands, an ice colour."
+   },
+   "author": "Chatburg",
+   "version": "1.1",
+   "files": [
+    "mod.json"
+   ],
+   "size": 2400,
+   "min_game": "4.3.0"
+  }
+ ]
+}

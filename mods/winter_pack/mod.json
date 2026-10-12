@@ -1,0 +1,34 @@
+{
+ "id": "winter_pack",
+ "name": "Зимний пак / Winter pack",
+ "version": "1.1",
+ "author": "Chatburg",
+ "description": "Пример мода: два зимних стиля, снеговик, команды !снегопад и !ёлка, ледяной цвет. Example mod: winter styles, a snowman decor, two chat events.",
+ "styles": [
+  {"id": "winter_cabin", "name": {"ru": "Зимняя избушка", "en": "Winter cabin"},
+   "walls": ["#8d5a3b", "#a0673f", "#7a4b30"], "roofs": ["#f4f8ff", "#e8f0fb"], "trim": "#f4f8ff", "door": "#5a3a22",
+   "roof_types": ["gable"], "window": "square", "floor_h": 1.0, "extras": ["wood_beams"], "res_floors": [[1, 1], [1, 2], [2, 3]], "tree": "pine"},
+  {"id": "ice_palace", "name": {"ru": "Ледяной дворец", "en": "Ice palace"},
+   "walls": ["#cfe9ff", "#b8dcff", "#e6f4ff"], "roofs": ["#7fb8ff", "#a8d0ff"], "trim": "#ffffff", "door": "#5a8fd0",
+   "roof_types": ["cone", "dome"], "window": "arch", "floor_h": 1.1, "extras": [], "res_floors": [[1, 2], [2, 4], [4, 7]], "tree": "pine"}
+ ],
+ "decor": [
+  {"id": "snowman", "name": {"ru": "Снеговик", "en": "Snowman"}, "cost": 40,
+   "parts": [
+    {"shape": "sphere", "pos": [0, 0.18, 0], "size": [0.36, 0.36, 0.36], "color": "#ffffff"},
+    {"shape": "sphere", "pos": [0, 0.45, 0], "size": [0.26, 0.26, 0.26], "color": "#ffffff"},
+    {"shape": "sphere", "pos": [0, 0.66, 0], "size": [0.18, 0.18, 0.18], "color": "#ffffff"},
+    {"shape": "cone", "pos": [0, 0.67, 0.1], "size": [0.04, 0.1, 0.04], "color": "#ff8c1a"},
+    {"shape": "cylinder", "pos": [0, 0.8, 0], "size": [0.14, 0.1, 0.14], "color": "#222222"}
+   ]}
+ ],
+ "colors": {"ледяной": "#bfe6ff", "icy": "#bfe6ff"},
+ "events": [
+  {"id": "snowfall", "command": ["снегопад", "snowfall"], "cost": 80, "effect": "weather", "weather": "snow", "duration": 120,
+   "news": {"ru": "{user} заказал снегопад!", "en": "{user} ordered a snowfall!"}},
+  {"id": "new_year_tree", "command": ["ёлка", "елка", "xmastree"], "cost": 60, "effect": "fireworks", "count": 5,
+   "news": {"ru": "{user} зажёг новогоднюю ёлку!", "en": "{user} lit the New Year tree!"}}
+ ],
+ "names": ["Дед Мороз", "Снегурочка", "Морозко"],
+ "news": [{"ru": "Синоптики обещают снег в Чатбурге", "en": "Forecasters promise snow in Chatburg"}]
+}
