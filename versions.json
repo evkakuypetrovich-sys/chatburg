@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v5.1.0",
+   "name": "Chatburg v5.1.0",
+   "tag": "v5.1.0",
+   "date": "2026-10-14",
+   "size": "51 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.1.0/Chatburg_v5.1.0_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.1.0/Chatburg_v5.1.0.apk",
+   "apk_size": "40 МБ",
+   "note": "Мини-игры (змейка, 2048, кликер, бей бобра), Чатграм, Автосалон на 624 машины + онлайн",
+   "note_en": "Mini-games (snake, 2048, clicker, whack-a-beaver), Chatgram, a car shop with 624 vehicles + online"
+  },
+  {
    "id": "v5.0.0",
    "name": "Chatburg v5.0.0",
    "tag": "v5.0.0",
