@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v5.4.0",
+   "name": "Chatburg v5.4.0",
+   "tag": "v5.4.0",
+   "date": "2026-10-18",
+   "size": "51 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.4.0/Chatburg_v5.4.0_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.4.0/Chatburg_v5.4.0.apk",
+   "apk_size": "40 МБ",
+   "note": "Mod Maker v2: конструктор объектов из деталей, редакторы машин, персонажей, предметов, работ, магазинов, логики и правил, звуки, безопасный скрипт, тест в один клик, экспорт .chatmod, моды хоста скачиваются игрокам онлайн.",
+   "note_en": "Mod Maker v2: part-based object builder, editors for vehicles, characters, items, jobs, shops, logic and rules, sound import, sandboxed script, one-click test, .chatmod export; host mods auto-download to online joiners."
+  },
+  {
    "id": "v5.3.0",
    "name": "Chatburg v5.3.0",
    "tag": "v5.3.0",
