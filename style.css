@@ -216,3 +216,8 @@ h2{background:linear-gradient(90deg,var(--pine),#ffd23f)}
 .dlwrap.open::after{content:"";position:absolute;top:calc(100% + 4px);left:50%;z-index:41;width:16px;height:16px;background:#fffdf5;border-left:3px solid var(--ink);border-top:3px solid var(--ink);transform:translateX(-50%) rotate(45deg)}
 @media(max-width:700px){.dlpop{max-height:70vh;max-height:70dvh}.dlwrap.open::after{display:none}}
 select{max-height:60vh;overflow-y:auto}
+/* history page */
+.hjump{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.hjump .btn{padding:6px 12px;font-size:15px}
+.roadgrid,.platgrid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.timeline .ver .small{opacity:.6;margin:6px 0 0}
+@media(max-width:700px){.timeline{padding-left:54px}.dot{left:-56px;width:46px;height:46px;font-size:14px}.timeline::before{left:20px}}
