@@ -2,7 +2,7 @@
 const hit=k=>fetch(`${A}/hit/${N}/${k}`).then(r=>r.json()).then(j=>j.value).catch(()=>null);
 const get=k=>fetch(`${A}/get/${N}/${k}`).then(r=>r.ok?r.json():{value:0}).then(j=>j.value??0).catch(()=>null);
 const bar=document.createElement('div');bar.className='cbbar';bar.innerHTML=`<span title="Всего визитов">👀 <b id="cbV">…</b></span><span title="Уникальных посетителей">🧑 <b id="cbU">…</b></span><button id="cbL" class="cbv" aria-label="Нравится">👍 <b>…</b></button><button id="cbD" class="cbv" aria-label="Не нравится">👎 <b>…</b></button><button id="cbF" class="cbf">✉️ Оставить отзыв</button>`;
-const nav=document.querySelector('nav.top');nav?nav.after(bar):document.body.prepend(bar);
+const nav=document.querySelector('nav.top'),lg=document.getElementById('lang');lg?lg.before(bar):nav?nav.append(bar):document.body.prepend(bar);
 const $=i=>document.getElementById(i),set=(i,v)=>{const e=$(i);(e.querySelector('b')||e).textContent=v??'—'};
 hit('visits').then(v=>set('cbV',v));
 (L.cbUniq?get('unique'):hit('unique').then(v=>{if(v)L.cbUniq=1;return v})).then(v=>set('cbU',v));

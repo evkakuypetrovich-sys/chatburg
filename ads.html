@@ -3,7 +3,7 @@
 <title>Реклама на сайте Chatburg — для рекламодателей</title>
 <meta name="description" content="Разместить рекламу игры на сайте Chatburg: форматы баннеров, правила (только игры и гейминг) и заявка.">
 <link rel="canonical" href="https://evkakuypetrovich-sys.github.io/chatburg/ads.html">
-<link rel="icon" href="favicon.ico"><link rel="stylesheet" href="style.css?v=202610111918"></head><body>
+<link rel="icon" href="favicon.ico"><link rel="stylesheet" href="style.css?v=202610121650"></head><body>
 <nav class="top"><a href="./" class="brand">Chatburg</a><div class="links"><a href="./">← На главную</a><a href="versions.html">Версии</a><a href="play/">Играть</a><a href="ads.html">Реклама</a></div></nav>
 <header class="hero" style="padding:40px 0 10px"><div class="wrap"><h1 class="logo" style="font-size:clamp(40px,8vw,84px)">Рекла<span>ма</span></h1><p class="tag">Покажите свою игру стримерам и зрителям Чатбурга.</p></div></header>
 <section><div class="wrap two">
@@ -35,4 +35,4 @@
 document.getElementById("adform").addEventListener("submit",e=>{e.preventDefault();const f=new FormData(e.target);
 const body=`Игра: ${f.get("game")}\nСсылка: ${f.get("link")}\nФормат: ${f.get("fmt")}\nСрок: ${f.get("dates")}\nКонтакт: ${f.get("contact")}\n\n${f.get("msg")}\n\n(Подтверждаю соответствие правилам: только игры, без 18+/казино/скама.)`;
 location.href=`mailto:evkakuypetrovich@gmail.com?subject=${encodeURIComponent("Реклама на сайте Chatburg: "+f.get("game"))}&body=${encodeURIComponent(body)}`});
-</script><script src="deco.js?v=202610111918" defer></script><script src="links.js?v=202610111918" defer></script></body></html>
+</script><script src="deco.js?v=202610111918" defer></script><script src="links.js?v=202610111918" defer></script><script src="stats.js?v=202610121650" defer></script></body></html>

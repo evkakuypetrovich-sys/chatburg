@@ -194,3 +194,14 @@ h2{background:linear-gradient(90deg,var(--pine),#ffd23f)}
 .footlinks{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 10px;margin-bottom:12px;font-size:14px}
 
 .dlpair{cursor:default}.dlbtns{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}.dlb{padding:4px 10px;border:2px solid var(--ink);border-radius:8px;background:#fff;color:var(--ink);text-decoration:none;font-weight:700;font-size:.9em}.dlb:hover,.dlb:focus-visible{background:#fff3c4;outline:none}.dlb.and{background:#e3fbef}
+/* header widget: views / likes / reviews */
+.cbbar{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 8px;font-weight:800;font-size:14px}
+.cbbar>span{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:2px 8px}
+.cbbar button{border:2px solid var(--ink);background:#fff;border-radius:10px;padding:2px 8px;font-weight:800;cursor:pointer;box-shadow:2px 2px 0 var(--ink);font:inherit}
+.cbbar button.on{background:var(--grn)}.cbbar button:disabled{cursor:default}
+.cbf{background:var(--grn)!important}
+#cbM{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px}
+#cbM[hidden]{display:none}
+.cbbox{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:18px;max-width:720px;width:100%;max-height:85vh;overflow:auto;position:relative}
+.cbx{position:absolute;top:8px;right:10px;border:none;background:none;font-size:20px;cursor:pointer}
+@media(max-width:700px){.cbbar{order:5;width:100%;justify-content:center;margin:6px 0}}
