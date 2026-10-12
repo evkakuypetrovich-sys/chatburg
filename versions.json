@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v4.3",
+   "name": "Chatburg v4.3",
+   "tag": "v4.3.0",
+   "date": "2026-10-12",
+   "size": "50 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.3.0/Chatburg_v4.3.0_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.3.0/Chatburg_v4.3.0.apk",
+   "apk_size": "40 МБ",
+   "note": "Погода и смена дня/ночи, фоторежим, задания дня, 15 достижений, мастерская модов",
+   "note_en": "Weather and day/night, photo mode, daily tasks, 15 achievements, mod workshop"
+  },
+  {
    "id": "v4.2",
    "name": "Chatburg v4.2",
    "tag": "v4.2.0",
