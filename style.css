@@ -192,3 +192,5 @@ h2{background:linear-gradient(90deg,var(--pine),#ffd23f)}
 .pi{font-size:28px;width:46px;height:46px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--pine),var(--org));border:2px solid var(--ink);flex:none}
 .plat b{display:block}.plat small{opacity:.7}
 .footlinks{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 10px;margin-bottom:12px;font-size:14px}
+
+.dlpair{cursor:default}.dlbtns{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}.dlb{padding:4px 10px;border:2px solid var(--ink);border-radius:8px;background:#fff;color:var(--ink);text-decoration:none;font-weight:700;font-size:.9em}.dlb:hover,.dlb:focus-visible{background:#fff3c4;outline:none}.dlb.and{background:#e3fbef}
