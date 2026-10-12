@@ -70,7 +70,9 @@
    "itch": "https://evkakuy228.itch.io/chatburg-v4",
    "note": "Онлайн: зрители заходят в город по коду",
    "note_en": "Online: viewers join the city with a code",
-   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.0.0/Chatburg_v4_Windows.zip"
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.0.0/Chatburg_v4_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.0.0/Chatburg_v4.0.0.apk",
+   "apk_size": "40 МБ"
   },
   {
    "id": "v3",
@@ -80,7 +82,8 @@
    "size": "45 МБ",
    "itch": "https://evkakuy228.itch.io/chatburg-v3",
    "note": "Живые стройки, дорожные работы, дрифт, зима",
-   "note_en": "Live construction, roadworks, drift, winter"
+   "note_en": "Live construction, roadworks, drift, winter",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v3.0.0/Chatburg_v3_Windows.zip"
   },
   {
    "id": "v2",
@@ -89,6 +92,8 @@
    "date": "2026-10-09",
    "size": "47 МБ",
    "itch": "https://evkakuy228.itch.io/chatburg",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v2.0.0/Chatburg_v2.0.0.apk",
+   "apk_size": "37 МБ",
    "note": "Карандашные дороги, перья стилей, каталог-тетрадка",
    "note_en": "Pencil roads, style pens, notebook catalog"
   },
@@ -99,6 +104,8 @@
    "date": "2026-10-06",
    "size": "46 МБ",
    "itch": "https://evkakuy228.itch.io/chatburg-game",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v1.0.0/Chatburg_v1.0.0.apk",
+   "apk_size": "36 МБ",
    "note": "Первый Чатбург: !дом, «Газель», погони ДПС",
    "note_en": "The first Chatburg: !дом, builders' van, chases"
   }
