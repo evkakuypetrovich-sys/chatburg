@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v4.4",
+   "name": "Chatburg v4.4",
+   "tag": "v4.4.0",
+   "date": "2026-10-12",
+   "size": "50 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.4.0/Chatburg_v4.4.0_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.4.0/Chatburg_v4.4.0.apk",
+   "apk_size": "40 МБ",
+   "note": "RP-режим «Выживание»: от первого лица, работа, еда, жильё, бот-мэр строит город",
+   "note_en": "RP mode «Survival»: first person, jobs, food, housing, a bot mayor grows the city"
+  },
+  {
    "id": "v4.3",
    "name": "Chatburg v4.3",
    "tag": "v4.3.0",
