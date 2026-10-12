@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v4.5",
+   "name": "Chatburg v4.5",
+   "tag": "v4.5.0",
+   "date": "2026-10-12",
+   "size": "52 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.5.0/Chatburg_v4.5.0_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.5.0/Chatburg_v4.5.0.apk",
+   "apk_size": "40 МБ",
+   "note": "Детальные машины нулевых, починены крыши, краны и шар-баба, F1 скрывает интерфейс, камера РП на уровне жителя",
+   "note_en": "Detailed 2000s-style vehicles, fixed roofs, cranes and wrecking ball, F1 hides all UI, RP camera at citizen height"
+  },
+  {
    "id": "v4.4",
    "name": "Chatburg v4.4",
    "tag": "v4.4.0",
