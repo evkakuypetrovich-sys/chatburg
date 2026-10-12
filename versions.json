@@ -58,8 +58,8 @@
    "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.3.0/Chatburg_v4.3.0_Windows.zip",
    "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.3.0/Chatburg_v4.3.0.apk",
    "apk_size": "40 МБ",
-   "note": "Погода и смена дня/ночи, фоторежим, задания дня, 15 достижений, мастерская модов",
-   "note_en": "Weather and day/night, photo mode, daily tasks, 15 achievements, mod workshop"
+   "note": "Погода и смена дня/ночи, фоторежим, задания дня, 15 достижений, Мод-мейкер для своих модов",
+   "note_en": "Weather and day/night, photo mode, daily tasks, 15 achievements, Mod Maker for your own mods"
   },
   {
    "id": "v4.2",
