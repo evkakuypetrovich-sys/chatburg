@@ -26,7 +26,12 @@ jobs:
         run: |
           set -euo pipefail
           SITE="https://evkakuypetrovich-sys.github.io/chatburg/"
-          ITCH="https://evkakuy228.itch.io"
+          case "$TAG" in
+            v4*) ITCH="https://evkakuy228.itch.io/chatburg-v4" ;;
+            v3*) ITCH="https://evkakuy228.itch.io/chatburg-v3" ;;
+            v1*) ITCH="https://evkakuy228.itch.io/chatburg-game" ;;
+            *)   ITCH="https://evkakuy228.itch.io/chatburg" ;;
+          esac
           NOTES="${BODY:-Без описания}"
           NOTES="${NOTES:0:4000}"
           jq -n --arg t "Chatburg $TAG вышла!" --arg d "$NOTES" --arg u "$URL" \
