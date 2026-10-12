@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v5.3.0",
+   "name": "Chatburg v5.3.0",
+   "tag": "v5.3.0",
+   "date": "2026-10-16",
+   "size": "51 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.3.0/Chatburg_v5.3.0_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.3.0/Chatburg_v5.3.0.apk",
+   "apk_size": "40 МБ",
+   "note": "Честные деньги в онлайне, рейтинг города, кооп-сохранения и восстановление при перезаходе",
+   "note_en": "Host-checked money online, city leaderboard, co-op saves and rejoin restore"
+  },
+  {
    "id": "v5.2.0",
    "name": "Chatburg v5.2.0",
    "tag": "v5.2.0",
