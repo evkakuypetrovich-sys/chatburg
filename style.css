@@ -205,3 +205,7 @@ h2{background:linear-gradient(90deg,var(--pine),#ffd23f)}
 .cbbox{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:18px;max-width:720px;width:100%;max-height:85vh;overflow:auto;position:relative}
 .cbx{position:absolute;top:8px;right:10px;border:none;background:none;font-size:20px;cursor:pointer}
 @media(max-width:700px){.cbbar{order:5;width:100%;justify-content:center;margin:6px 0}}
+/* desktop header fit: wrap nav links, compact widget */
+@media(min-width:701px){.top{flex-wrap:wrap;row-gap:6px}.links{flex-wrap:wrap;overflow:visible;gap:4px 12px;min-width:0}
+.cbbar{gap:4px;margin:0 4px;font-size:13px;flex-shrink:0}.cbbar>span,.cbbar button{padding:1px 6px}}
+@media(min-width:701px) and (max-width:1500px){.cbf{font-size:0!important}.cbf::first-letter{font-size:13px}}
