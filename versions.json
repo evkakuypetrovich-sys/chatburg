@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v4.6.1",
+   "name": "Chatburg v4.6.1",
+   "tag": "v4.6.1",
+   "date": "2026-10-13",
+   "size": "51 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.6.1/Chatburg_v4.6.1_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.6.1/Chatburg_v4.6.1.apk",
+   "apk_size": "40 МБ",
+   "note": "Мини-плеер Яндекс Музыки и VK Музыки прямо в игре (F4), исправления онлайн-RP, компаса и телефона, предметы и правила в модах",
+   "note_en": "Yandex Music / VK Music mini-player inside the game (F4), online RP, compass and phone fixes, mod items and rules"
+  },
+  {
    "id": "v4.6",
    "name": "Chatburg v4.6",
    "tag": "v4.6.0",
