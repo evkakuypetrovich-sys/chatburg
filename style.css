@@ -209,3 +209,10 @@ h2{background:linear-gradient(90deg,var(--pine),#ffd23f)}
 @media(min-width:701px){.top{flex-wrap:wrap;row-gap:6px}.links{flex-wrap:wrap;overflow:visible;gap:4px 12px;min-width:0}
 .cbbar{gap:4px;margin:0 4px;font-size:13px;flex-shrink:0}.cbbar>span,.cbbar button{padding:1px 6px}}
 @media(min-width:701px) and (max-width:1500px){.cbf{font-size:0!important}.cbf::first-letter{font-size:13px}}
+/* scrollable version picker */
+.dlpop{max-height:min(460px,70vh);overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;scrollbar-width:thin;scrollbar-color:var(--ink) #f3ecd6;scrollbar-gutter:stable}
+.dlpop::-webkit-scrollbar{width:10px}.dlpop::-webkit-scrollbar-track{background:#f3ecd6;border-radius:10px;margin:10px 0}.dlpop::-webkit-scrollbar-thumb{background:var(--ink);border-radius:10px;border:2px solid #f3ecd6}.dlpop::-webkit-scrollbar-thumb:hover{background:#444}
+.dlpop::before{display:none}
+.dlwrap.open::after{content:"";position:absolute;top:calc(100% + 4px);left:50%;z-index:41;width:16px;height:16px;background:#fffdf5;border-left:3px solid var(--ink);border-top:3px solid var(--ink);transform:translateX(-50%) rotate(45deg)}
+@media(max-width:700px){.dlpop{max-height:70vh;max-height:70dvh}.dlwrap.open::after{display:none}}
+select{max-height:60vh;overflow-y:auto}
