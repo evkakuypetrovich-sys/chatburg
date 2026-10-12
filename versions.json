@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v5.2.0",
+   "name": "Chatburg v5.2.0",
+   "tag": "v5.2.0",
+   "date": "2026-10-15",
+   "size": "51 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.2.0/Chatburg_v5.2.0_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.2.0/Chatburg_v5.2.0.apk",
+   "apk_size": "40 МБ",
+   "note": "Чатбанк (вклады, кредиты, переводы), камера с галереей и селфи, общие машины по-настоящему",
+   "note_en": "Chatbank (savings, loans, transfers), camera with a gallery and selfies, real shared cars"
+  },
+  {
    "id": "v5.1.0",
    "name": "Chatburg v5.1.0",
    "tag": "v5.1.0",
