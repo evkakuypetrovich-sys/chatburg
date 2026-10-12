@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v5.0.0",
+   "name": "Chatburg v5.0.0",
+   "tag": "v5.0.0",
+   "date": "2026-10-13",
+   "size": "51 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.0.0/Chatburg_v5.0.0_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.0.0/Chatburg_v5.0.0.apk",
+   "apk_size": "40 МБ",
+   "note": "Телефон: фонарик, звуки, радио, новости, читы, пранки, пасхалки",
+   "note_en": "Phone: flashlight, soundboard, radio, news, cheats, pranks, easter eggs"
+  },
+  {
    "id": "v4.6.2",
    "name": "Chatburg v4.6.2",
    "tag": "v4.6.2",
