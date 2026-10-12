@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v4.6",
+   "name": "Chatburg v4.6",
+   "tag": "v4.6.0",
+   "date": "2026-10-12",
+   "size": "50 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.6.0/Chatburg_v4.6.0_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v4.6.0/Chatburg_v4.6.0.apk",
+   "apk_size": "40 МБ",
+   "note": "10 стартовых городов, своё название города, RP-выживание с инвентарём, работой, метками и возрождением, онлайн-RP в городе стримера",
+   "note_en": "10 starting cities, name your city, RP survival with inventory, jobs, markers and respawn, online RP in the streamer's city"
+  },
+  {
    "id": "v4.5",
    "name": "Chatburg v4.5",
    "tag": "v4.5.0",
