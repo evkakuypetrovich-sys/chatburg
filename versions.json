@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v5.5.0",
+   "name": "Chatburg v5.5.0",
+   "tag": "v5.5.0",
+   "date": "2026-10-20",
+   "size": "142 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.5.0/Chatburg_v5.5.0_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.5.0/Chatburg_v5.5.0.apk",
+   "apk_size": "133 МБ",
+   "note": "Новые районы (Старый город, Порт, Наукоград), 5 достопримечательностей, 60 зданий и 101 декор Kenney, HD-текстуры Poly Haven, звуки окружения, 12 треков, импорт .chatmod в меню модов, текстуры на деталях машин и персонажей, пассажирские места онлайн.",
+   "note_en": "New districts (Old Town, Port, Science City), 5 landmarks, 60 Kenney buildings and 101 decor items, Poly Haven HD textures, ambient sounds, 12 music tracks, .chatmod import in the mods menu, textures on car and character parts, passenger seats online."
+  },
+  {
    "id": "v5.4.0",
    "name": "Chatburg v5.4.0",
    "tag": "v5.4.0",
