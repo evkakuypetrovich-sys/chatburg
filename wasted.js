@@ -8,7 +8,7 @@ var css=document.createElement("style");css.textContent=
 "html.wasted body>*:not(#wst){filter:grayscale(1) blur(2px);transition:filter 1s}";
 document.head.appendChild(css);
 /* [phrase, sound file] */
-var G={win:["ты 200","wasted"],apk:["тебя забурмалдили","wasted1"],gh:["ты обкакан","wasted2"],itch:["ты банан","wasted3"],dc:["ты бабушка люся","wasted4"],nav:["я пукнул","wasted5"]};
+var G={win:["ты 200","wasted"],apk:["тебя забурмалдили","wasted1"],gh:["ты обкакан","wasted2"],itch:["ты банан","wasted3"],dc:["ты бабушка люся","wasted4"],nav:["я пукнул","wasted5"],ext:["ты сбежал 🏃","g_ext"]};
 function kind(a){var h=a.href,t=(a.textContent||"")+" "+(a.getAttribute("data-en")||"");
  if(/\.apk(\?|$)/i.test(h)||/android/i.test(t))return"apk";
  if(/windows/i.test(t)||/_Windows\.zip$/i.test(h))return"win";
@@ -16,6 +16,7 @@ function kind(a){var h=a.href,t=(a.textContent||"")+" "+(a.getAttribute("data-en
  if(/github\.com/i.test(h))return"gh";
  if(/discord\.(gg|com)/i.test(h))return"dc";
  if(a.origin===location.origin&&!a.hash&&a.pathname!==location.pathname)return"nav";
+ if(/^https?:/.test(h)&&a.origin!==location.origin)return"ext";
  return null}
 var snd=null;function play(f){try{if(snd)snd.pause();snd=new Audio();snd.src="assets/"+f+"."+(snd.canPlayType('audio/ogg; codecs="vorbis"')?"ogg":"mp3")+"?v=3";var p=snd.play();p&&p.catch&&p.catch(function(){})}catch(e){}}
 var el,tm;function close(){if(!el)return;clearTimeout(tm);document.documentElement.classList.remove("wasted");var e=el;el=null;e.classList.remove("on");setTimeout(function(){e.remove()},400)}
