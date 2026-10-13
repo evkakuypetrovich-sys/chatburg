@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v5.5.2",
+   "name": "Chatburg v5.5.2",
+   "tag": "v5.5.2",
+   "date": "2026-10-22",
+   "size": "142 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.5.2/Chatburg_v5.5.2_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.5.2/Chatburg_v5.5.2.apk",
+   "apk_size": "76 МБ",
+   "note": "Мобильная версия: новый интерфейс для телефона (вкладки, мини-карта, кнопка действия, панели на весь экран), крупный интерфейс с ползунком «Размер интерфейса», управление одним пальцем, стандартные жесты, исправления интерфейса на Android и ПК.",
+   "note_en": "Mobile edition: new phone UI (tabs, mini-map, action button, full-screen sheets), large UI with a UI size slider, one-finger controls, standard gestures, UI fixes on Android and PC."
+  },
+  {
    "id": "v5.5.1",
    "name": "Chatburg v5.5.1",
    "tag": "v5.5.1",
