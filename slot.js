@@ -1,4 +1,5 @@
-/* Fake-coin slot machine. No real money. Balance in localStorage. */
+/* Evil laugh (assets/laugh.*): "Evil Laugh" by AntumDeluge, https://opengameart.org/content/evil-laugh, CC0 1.0 (public domain).
+   Fake-coin slot machine. No real money. Balance in localStorage. */
 (function(){
 var root=document.getElementById("slot");if(!root)return;
 var S=["🚗","🍌","💩","👵","💨","💰","200"],PAY={"200":100,"💰":50,"🚗":20,"👵":15,"🍌":10,"💨":8,"💩":5},K="chatburgSlotBal",H=72;
@@ -31,7 +32,7 @@ root.innerHTML='<div class="sm"><div class="lever" title="SPIN"></div><h3>CHATBU
 '<div class="msg"></div><table>'+tr+'</table><div class="cap">без реальных денег</div></div>';
 var q=function(s){return root.querySelector(s)},strips=root.querySelectorAll(".strip"),bal=+localStorage.getItem(K);if(!(bal>=0)||localStorage.getItem(K)===null)bal=1000;
 function upd(){localStorage.setItem(K,bal);q(".bal").textContent="🪙 "+bal}
-function snd(n){try{var a=new Audio();a.src="assets/slot_"+n+"."+(a.canPlayType('audio/ogg; codecs="vorbis"')?"ogg":"mp3");var p=a.play();p&&p.catch&&p.catch(function(){});return a}catch(e){}}
+function snd(n){try{var a=new Audio();a.src="assets/"+(n=="laugh"?"":"slot_")+n+"."+(a.canPlayType('audio/ogg; codecs="vorbis"')?"ogg":"mp3");var p=a.play();p&&p.catch&&p.catch(function(){});return a}catch(e){}}
 function rnd(){return S[Math.random()*S.length|0]}
 function C(x){return "<div>"+(x=="200"?"<span class=s200>200</span>":x)+"</div>"}
 function blood(){var w=innerWidth,h=innerHeight,g="";for(var i=0;i<26;i++){var x=Math.random()*w,y=Math.random()*h*.8,r=15+Math.random()*60;g+='<g class="sp" style="transform-origin:'+x+'px '+y+'px;animation-delay:'+(i*.04)+'s"><circle cx="'+x+'" cy="'+y+'" r="'+r+'"/>';for(var j=0;j<6;j++){var a=Math.random()*6.3,d=r*(1+Math.random()*.9);g+='<circle cx="'+(x+Math.cos(a)*d)+'" cy="'+(y+Math.sin(a)*d)+'" r="'+(2+Math.random()*r/4)+'"/>'}if(Math.random()<.6){var dw=4+Math.random()*r/3;g+='<rect class="d" style="transform-origin:'+x+'px '+y+'px" x="'+(x-dw/2)+'" y="'+y+'" width="'+dw+'" height="'+(60+Math.random()*h/2)+'" rx="'+dw/2+'"/>'}g+="</g>"}var b=document.createElement("div");b.id="blood";b.innerHTML='<svg viewBox="0 0 '+w+' '+h+'" fill="#8a0303" fill-opacity=".85">'+g+"</svg>";document.documentElement.appendChild(b);setTimeout(function(){b.remove()},5200)}
@@ -51,7 +52,7 @@ function spin(){if(busy)return;var bet=+q("select").value;
   bal+=w;upd();busy=false;q(".spin").disabled=false;
   if(w){m="Выигрыш: +"+w+" 🪙"}else m=bal<=0?"Монеты кончились — жми SPIN для пополнения":"Мимо!";q(".msg").textContent=m;
   if(res.join("")=="💰💰💰"){snd("jack");var o=document.createElement("div");o.id="jkp";o.innerHTML="<b>ДЖЕКПОТ</b>";o.onclick=function(){o.remove()};document.body.appendChild(o);setTimeout(function(){o.remove()},4000)}
-  else if(res.join()=="200,200,200"){if(window.wastedShow)window.wastedShow("ТЫ 200","wasted");else snd("lose");blood()}
+  else if(res.join()=="200,200,200"){if(window.wastedShow)window.wastedShow("ТЫ 200","wasted");else snd("lose");blood();setTimeout(function(){snd("laugh",1)},600)}
   else if(res.join("")=="💩💩💩"&&window.wastedShow)window.wastedShow("ты обкакан","wasted2");
   else snd(w?"win":"lose");
  },2400);}
