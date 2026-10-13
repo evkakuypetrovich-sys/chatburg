@@ -1,4 +1,4 @@
-/* WASTED-style gag overlay: each button type has its own phrase + original synthesized sound. Real action still happens. */
+/* WASTED-style gag overlay: each button type has its own phrase + sound (real CC0/PD recordings, see assets/CREDITS.txt). Real action still happens. */
 (function(){
 var css=document.createElement("style");css.textContent=
 "#wst{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transition:opacity .4s}"+
@@ -17,7 +17,7 @@ function kind(a){var h=a.href,t=(a.textContent||"")+" "+(a.getAttribute("data-en
  if(/discord\.(gg|com)/i.test(h))return"dc";
  if(a.origin===location.origin&&!a.hash&&a.pathname!==location.pathname)return"nav";
  return null}
-var snd=null;function play(f){try{if(snd)snd.pause();snd=new Audio();snd.src="assets/"+f+"."+(snd.canPlayType('audio/ogg; codecs="vorbis"')?"ogg":"mp3")+"?v=2";var p=snd.play();p&&p.catch&&p.catch(function(){})}catch(e){}}
+var snd=null;function play(f){try{if(snd)snd.pause();snd=new Audio();snd.src="assets/"+f+"."+(snd.canPlayType('audio/ogg; codecs="vorbis"')?"ogg":"mp3")+"?v=3";var p=snd.play();p&&p.catch&&p.catch(function(){})}catch(e){}}
 var el,tm;function close(){if(!el)return;clearTimeout(tm);document.documentElement.classList.remove("wasted");var e=el;el=null;e.classList.remove("on");setTimeout(function(){e.remove()},400)}
 function show(g){close();el=document.createElement("div");el.id="wst";el.innerHTML='<div class="band"></div><b></b>';el.querySelector("b").textContent=g[0];el.onclick=close;document.body.appendChild(el);document.documentElement.classList.add("wasted");el.offsetWidth;el.classList.add("on");play(g[1]);tm=setTimeout(close,4000)}
 window.wastedShow=function(t,s){show([t,s])};

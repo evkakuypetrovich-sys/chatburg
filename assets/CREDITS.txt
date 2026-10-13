@@ -1,0 +1,20 @@
+Sound credits for the Chatburg site (assets/*.ogg, assets/*.mp3)
+All sounds are CC0 / public domain recordings. They were trimmed, loudness-normalised and converted to mono OGG and MP3.
+
+wasted.*      («ты 200», death boom, slowed down 0.8x)
+              "explosion_distant.mp3" from "Basic Sound Effects" by n4, https://opengameart.org/content/basic-sound-effects, CC0 1.0
+wasted1.*     («тебя забурмалдили», boing)
+              "BOING!" by Aeva, https://opengameart.org/content/boing, CC0 1.0
+wasted2.*     («ты обкакан», splat)
+              "squishsplat_impact.mp3" from "Squish Sounds Effects", https://opengameart.org/content/squish-sounds-effects, CC0 1.0
+wasted3.*     («ты банан», slide whistle)
+              "Fast Rise Fall.wav" from "bb - Slide Whistle (Aug 2021)", https://cc0-sounds.exi.software/collection/bb%20-%20slide%20whistle%20(aug%202021)/, CC0 1.0 (as listed on that site)
+wasted4.*     («ты бабушка люся», chime, with an old-radio band-pass filter and warble added)
+              "bell3.mp3" from "Basic Sound Effects" by n4, https://opengameart.org/content/basic-sound-effects, CC0 1.0
+wasted5.*     («я пукнул», long fart, 0.3-4.4 s excerpt)
+              "Wet fart tummy rumbles.ogg" by natalie (pdsounds.org #192), https://commons.wikimedia.org/wiki/File:Wet_fart_tummy_rumbles.ogg, Public domain
+slot_spin.*   "Winding Down Slot Machine Reel Spin 17" (mechanical-slot-machine-17), https://sfxmint.com/sounds/mechanical-slot-machine, CC0 1.0
+slot_win.*    "Win sound effect" by Listener, https://opengameart.org/content/win-sound-effect, CC0 1.0
+slot_lose.*   "Game Over Trumpet SFX" (losetrumpet.ogg), https://opengameart.org/content/game-over-trumpet-sfx, CC0 1.0
+slot_jack.*   "Victory" by Musheran, https://opengameart.org/content/victory-6, CC0 1.0
+laugh.*       "Evil Laugh" by AntumDeluge, https://opengameart.org/content/evil-laugh, CC0 1.0
