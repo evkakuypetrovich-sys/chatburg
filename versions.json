@@ -10,6 +10,19 @@
  },
  "versions": [
   {
+   "id": "v5.5.1",
+   "name": "Chatburg v5.5.1",
+   "tag": "v5.5.1",
+   "date": "2026-10-21",
+   "size": "142 МБ",
+   "itch": "https://evkakuy228.itch.io/chatburg-v4",
+   "win": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.5.1/Chatburg_v5.5.1_Windows.zip",
+   "apk": "https://github.com/evkakuypetrovich-sys/chatburg/releases/download/v5.5.1/Chatburg_v5.5.1.apk",
+   "apk_size": "76 МБ",
+   "note": "Исправления Android: встроенный мини-плеер Яндекс/VK Музыки, кнопка «Назад», автосохранение при сворачивании, вырезы экрана, масштаб интерфейса, Mod Maker и импорт модов на телефоне, новые сенсорные кнопки, авто-качество, APK 76 МБ вместо 133 МБ.",
+   "note_en": "Android fixes: in-game Yandex/VK Music mini-player, Back button, autosave when minimized, notch safe area, UI scaling, Mod Maker and mod import on phones, new touch buttons, auto quality, 76 MB APK instead of 133 MB."
+  },
+  {
    "id": "v5.5.0",
    "name": "Chatburg v5.5.0",
    "tag": "v5.5.0",
