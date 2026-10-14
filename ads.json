@@ -15,18 +15,6 @@
       "cta": "Вступить"
     },
     {
-      "id": "boosty",
-      "title": "Поддержать Chatburg на Boosty",
-      "link": "https://boosty.to/evkakuy228",
-      "image_v": "img/ads/boosty_v.webp",
-      "image_r": "img/ads/boosty_r.webp",
-      "weight": 2,
-      "house": true,
-      "headline": "Поддержи Чатбург на Boosty",
-      "text": "Помоги развитию игры — каждая поддержка приближает новые версии.",
-      "cta": "Поддержать"
-    },
-    {
       "id": "play",
       "title": "Chatburg — играть в браузере",
       "link": "play/",
